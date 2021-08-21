@@ -3,14 +3,7 @@ import { FiEdit3, FiTrash } from 'react-icons/fi';
 
 import { Container } from './styles';
 import api from '../../services/api';
-
-interface FoodItem {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  price: string;
-}
+import { FoodItem } from '../../food-item';
 
 interface FoodProps {
   food: FoodItem;
@@ -19,7 +12,12 @@ interface FoodProps {
   handleEditFood: (food: FoodItem) => void;
 }
 
-function Food({ food, handleDelete, available, handleEditFood }: FoodProps) {
+function Food({
+  food,
+  handleDelete,
+  available,
+  handleEditFood,
+}: FoodProps): JSX.Element {
   const [isAvailable, setIsAvailable] = useState(available);
 
   function setEditingFood() {
