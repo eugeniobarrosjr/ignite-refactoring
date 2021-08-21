@@ -8,7 +8,7 @@ import { FoodItem } from '../../food-item';
 interface FoodProps {
   food: FoodItem;
   handleDelete: (id: number) => void;
-  available: boolean;
+  available?: boolean;
   handleEditFood: (food: FoodItem) => void;
 }
 
